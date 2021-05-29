@@ -3,6 +3,7 @@ import logo from "../../assets/Rey-Diaz-Logos-Blue.png";
 import { Image, Navbar, Nav } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../firebase/context";
+import "./navbar.css";
 
 export default function TopNav() {
   const history = useHistory();
@@ -15,7 +16,7 @@ export default function TopNav() {
 
     try {
       await logout();
-      history.push("/login");
+      history.push("/sign-in");
     } catch {
       setError("Failed to log out");
     }
@@ -26,8 +27,7 @@ export default function TopNav() {
         collapseOnSelect
         expand="lg"
         bg="light"
-        style={{ backgroundColor: "#bfa36f" }}
-        className="w-100 d-flex"
+        className="navbg w-100 d-flex"
         variant="light"
       >
         <Navbar.Brand as={Link} to="/">
@@ -48,7 +48,7 @@ export default function TopNav() {
           </Nav>
           <Nav>
             {!currentUser && (
-              <Nav.Link as={Link} to="/login" className="text-muted">
+              <Nav.Link as={Link} to="/sign-in" className="text-muted">
                 Login
               </Nav.Link>
             )}

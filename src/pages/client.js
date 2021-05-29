@@ -102,7 +102,7 @@ export default function ClientPage() {
   ];
   return (
     <React.Fragment>
-      <TopNav />
+      {/* <TopNav /> */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -110,7 +110,7 @@ export default function ClientPage() {
         className=" container h-100 mt-1 mb-3"
       >
         <Row xs={1} md={1} lg={1}>
-          <Col>
+          <Col className="p-4">
             <h5 className="text-left">Clients</h5>
             <p className="text-left">
               On this page you can add new clients to the "client" database.

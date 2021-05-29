@@ -280,15 +280,15 @@ export default function AdminDash() {
 
   return (
     <React.Fragment>
-      <TopNav />
+      {/* <TopNav /> */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         fluid
-        className=" container h-100 mt-1 mb-3"
+        className="container h-100 mt-1 mb-3"
       >
         <Row xs={1} md={1} lg={1}>
-          <Col>
+          <Col className="p-4">
             <h5 className="text-left">Hey Editor, </h5>
             <p className="text-left">
               On this page you can control the three blog spaces on the
@@ -384,26 +384,6 @@ export default function AdminDash() {
                 />
               </Card.Body>
             </Card>
-          </Col>
-        </Row>
-
-        <Row className="w-100" xs={1} md={1} lg={1}>
-          <Col className="h-100">
-            <p className="text-muted text-center mt-3" style={{ fontSize: 10 }}>
-              San Antonio Website Design by
-              <a
-                target="__blank"
-                href="https://www.j12designs.com"
-                rel="noreferr noopener"
-                style={{
-                  textDecoration: "none",
-                  color: "#2f2f2f",
-                  paddingLeft: 3,
-                }}
-              >
-                J12 Designs
-              </a>{" "}
-            </p>
           </Col>
         </Row>
       </motion.div>

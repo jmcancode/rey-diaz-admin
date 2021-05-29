@@ -10,21 +10,23 @@ import LoginPage from "./components/auth/login";
 import SchedulePage from "./pages/schedule";
 import ClientPage from "./pages/client";
 import ErrorPage from "./pages/errorPage";
+import Navbar from "./components/sidebar/NavBar";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <div className="App">
-          <Switch>
-            <Route path="/login" component={LoginPage} />
+        <Switch>
+          <Route path="/sign-in" component={LoginPage} />
+          <div className="App">
+            <Navbar />
             <PrivateRoute exact path="/" component={AdminDash} />
             {/* <PrivateRoute path="/editor" component={AdminDash} /> */}
             <PrivateRoute path="/schedule" component={SchedulePage} />
             <PrivateRoute path="/client" component={ClientPage} />
-            <Route component={ErrorPage} />
-          </Switch>
-        </div>
+          </div>
+          <Route component={ErrorPage} />
+        </Switch>
       </Router>
     </AuthProvider>
   );

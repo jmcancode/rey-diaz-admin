@@ -1,6 +1,6 @@
 import React from "react";
 import {  Row, Col } from "react-bootstrap";
-import TopNav from "../components/navigation/navBar";
+// import TopNav from "../components/navigation/navBar";
 import FullCalendar from "@fullcalendar/react";
 import interactionPlugin from "@fullcalendar/interaction";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -12,7 +12,7 @@ const handleDateClick = (arg) => {
 export default function SchedulePage() {
   return (
     <>
-      <TopNav />
+      {/* <TopNav /> */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

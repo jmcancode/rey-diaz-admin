@@ -3,6 +3,7 @@ import "firebase/auth";
 import "firebase/analytics";
 import "firebase/firestore";
 import "firebase/storage";
+import "firebase/performance";
 
 const firebaseApp = firebase.initializeApp({
   apiKey: process.env.REACT_APP_API_KEY,
@@ -14,9 +15,10 @@ const firebaseApp = firebase.initializeApp({
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 });
 
-export const auth = firebase.auth();
+export const auth = firebaseApp.auth();
 export const db = firebaseApp.firestore();
+export const perf = firebaseApp.performance();
 export const storage = firebaseApp.storage();
-export const analytics = firebase.analytics();
+export const analytics = firebaseApp.analytics();
 
 export default firebaseApp;
